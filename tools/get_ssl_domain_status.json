@@ -1,0 +1,21 @@
+{
+  "name": "get_ssl_domain_status",
+  "title": "Get SSL & Domain Expiry Status",
+  "description": "Returns SSL certificate validity and domain expiry information for a site. Useful for identifying certificates or domains that are expiring soon.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "site_id": {
+        "type": "integer",
+        "description": "The numeric ID of the site, obtained from list_sites."
+      }
+    },
+    "required": ["site_id"]
+  },
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  }
+}
