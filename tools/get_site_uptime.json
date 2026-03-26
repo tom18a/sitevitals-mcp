@@ -1,0 +1,28 @@
+{
+  "name": "get_site_uptime",
+  "title": "Get Site Uptime & Incidents",
+  "description": "Returns recent uptime checks and downtime incidents for a specific site. Includes response times, status codes, and a summary of recent outages with their duration.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "site_id": {
+        "type": "integer",
+        "description": "The numeric ID of the site, obtained from list_sites."
+      },
+      "days": {
+        "type": "integer",
+        "description": "How many days of history to return. Defaults to 7. Maximum 90.",
+        "default": 7,
+        "minimum": 1,
+        "maximum": 90
+      }
+    },
+    "required": ["site_id"]
+  },
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  }
+}
