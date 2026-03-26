@@ -1,0 +1,27 @@
+{
+  "name": "get_latest_checks",
+  "title": "Get Latest SEO, Security & Speed Checks",
+  "description": "Returns the most recent SEO, security, and page speed check results for a site. Includes pass/fail/warning breakdowns and the specific issues found in each area.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "site_id": {
+        "type": "integer",
+        "description": "The numeric ID of the site, obtained from list_sites."
+      },
+      "area": {
+        "type": "string",
+        "enum": ["seo", "security", "speed", "all"],
+        "description": "Which check area to retrieve. Use \"all\" only when multiple areas are needed simultaneously, as it returns a larger payload.",
+        "default": "all"
+      }
+    },
+    "required": ["site_id"]
+  },
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  }
+}
