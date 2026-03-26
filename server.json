@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.tom18a/sitevitals",
+  "title": "SiteVitals",
+  "description": "Monitor website health, uptime, SEO, security and performance via your AI assistant.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.sitevitals.co.uk/docs/mcp",
+  "repository": {
+    "url": "https://github.com/tom18a/sitevitals-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://www.sitevitals.co.uk/api/mcp"
+    }
+  ]
+}
