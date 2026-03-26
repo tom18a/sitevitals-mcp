@@ -1,0 +1,16 @@
+{
+  "name": "list_sites",
+  "title": "List Monitored Sites",
+  "description": "Returns all websites being monitored by this SiteVitals account, including their current health scores for SEO, security, speed, integrity, uptime, and content. Use this as the starting point to identify site IDs before calling other tools.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  }
+}
