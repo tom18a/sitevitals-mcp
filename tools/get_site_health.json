@@ -1,0 +1,21 @@
+{
+  "name": "get_site_health",
+  "title": "Get Site Health Summary",
+  "description": "Returns a detailed health summary for a specific site including all current scores, recent trends, and a plain-English status for each monitoring area. Use after list_sites to drill into a specific site.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "site_id": {
+        "type": "integer",
+        "description": "The numeric ID of the site, obtained from list_sites."
+      }
+    },
+    "required": ["site_id"]
+  },
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  }
+}
